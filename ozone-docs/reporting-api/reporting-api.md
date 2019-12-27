@@ -1,3 +1,9 @@
+
+
+
+// colors
+s { color: green }
+em { color: blue }
 ## reporting-api
 This proof of concept is to determine whether the Admin UI’s current charting capability is the most suitable environment to build the Publisher Analytics suite.
 
@@ -12,13 +18,27 @@ Status Code | error | error_description
 
 
 
-### available fields endpoint
+### Available Fields endpoint
 <details open>
-<summary>Execute scripts/run-dev.sh script</summary>
+<summary>Available fields for the selected publisher in the selected date range.</summary>
 
 ```shell
-GET /kpi/publisher-analytics-available-fields?publisher=the-stylist-group&start_date={start_date}&end_date={end_date}
+GET /kpi/publisher-analytics-available-fields?publisher=<span style="color:blue">{publisher}</span>&start_date=<span style="color:blue">{start_date}</span>&end_date=<span style="color:blue">{end_date}</span>
 ```
+
+<span style="color:blue">some *blue* text</span>
+</details>
+
+URI Parameters
+<details closed>
+
+
+parameter | parameter_type | parameter_description
+------------ | ------------- | -------------
+publisher | **string** (required) | one of the available publishers: *{guardian, news-uk, telegraph, reach, the-stylist-group, ozone}*. Ozone means selecting all available publishers.
+start_date | **string** (required) |  starting date in YYYY-MM-DD format
+start_date | **string** (required) |  end date in YYYY-MM-DD format
+
 </details>
 
 That command will build docker image (only in first execution) and start docker container.
