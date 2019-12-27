@@ -26,21 +26,21 @@ Status Code | error | error_description
 GET /kpi/publisher-analytics-available-fields?publisher=<span style="color:blue">{publisher}</span>&start_date=<span style="color:blue">{start_date}</span>&end_date=<span style="color:blue">{end_date}</span>
 ```
 
-<span style="color:blue">some *blue* text</span>
 </details>
 
-URI Parameters
 <details closed>
-
+<summary>URI Parameters</summary>
 
 parameter | parameter_type | parameter_description
 ------------ | ------------- | -------------
-publisher | **string** (required) | one of the available publishers: *{guardian, news-uk, telegraph, reach, the-stylist-group, ozone}*. Ozone means selecting all available publishers.
+publisher | **string** (required) | one of the available publishers: *{guardian, news-uk, telegraph, reach, the-stylist-group, ozone}*, ozone means selecting all available publishers.
 start_date | **string** (required) |  starting date in YYYY-MM-DD format
 start_date | **string** (required) |  end date in YYYY-MM-DD format
 
 </details>
 
+<details closed>
+<summary>Example</summary>
 That command will build docker image (only in first execution) and start docker container.
 
 Documentation is available on [http://localhost:4567](http://localhost:4567) address.
