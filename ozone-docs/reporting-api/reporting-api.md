@@ -1,9 +1,4 @@
 
-
-
-// colors
-s { color: green }
-em { color: blue }
 ## reporting-api
 This proof of concept is to determine whether the Admin UI’s current charting capability is the most suitable environment to build the Publisher Analytics suite.
 
@@ -23,7 +18,9 @@ Status Code | error | error_description
 <summary>Available fields for the selected publisher in the selected date range.</summary>
 
 ```shell
-GET /kpi/publisher-analytics-available-fields?publisher=<span style="color:blue">{publisher}</span>&start_date=<span style="color:blue">{start_date}</span>&end_date=<span style="color:blue">{end_date}</span>
+
+GET /kpi/publisher-analytics-available-fields?publisher={publisher}&start_date={start_date}&end_date={end_date}
+
 ```
 
 </details>
@@ -41,47 +38,43 @@ start_date | **string** (required) |  end date in YYYY-MM-DD format
 
 <details closed>
 <summary>Example</summary>
-That command will build docker image (only in first execution) and start docker container.
 
-Documentation is available on [http://localhost:4567](http://localhost:4567) address.
+```shell
 
-### How to add new project docs
-1. Clone this project (ozone-docs).
-2. Add empty project.
-    <details open>
-    <summary>Run scripts/add-project.sh</summary>
+GET /kpi/publisher-analytics-available-fields?publisher=telegraph</span>&start_date=2019-12-10&end_date=2019-12-11
 
-    ```shell
-    ./scripts/add-project.sh <PROJECT_NAME>
-    ```
-    </details>
-3. Run ozone-docs and go to [http://localhost:4567](http://localhost:4567).
-    <details open>
-    <summary>Run scripts/run-dev.sh</summary>
+```
 
-    ```shell
-    ./scripts/run-dev.sh
-    ```
-    </details>
-4. Make modifications in documentation and move **source/includes/partials/generated/<PROJECT_NAME>** folder to **ozone-docs/** in modified project.
+```json
 
-### How to edit project docs
-1. Clone this project (ozone-docs).
-2. Create alias for edit ozone-docs command.
-    <details open>
-    <summary>~/.bashrc</summary>
+{
+    "device_type": [
+        "Computer",
+        "Mobile",
+        "Tablet",
+        "Game console",
+        "Digital media receiver"
+    ],
+    "domain": [
+        "telegraph.co.uk"
+    ],
+    "partner": [
+        "appnexus",
+        "openx",
+        "beeswax",
+        "rubicon",
+        "pubmatic"
+    ],
+    "size": [
+        "728x90",
+        "300x250",
+        "970x250",
+        "320x50",
+        "300x600",
+        "300x50"
+    ]
+}
 
-    ```shell
-    alias edit-ozone-docs='/bin/bash <PATH TO ozone-docs>/scripts/run-dev.sh $(pwd)/ozone-docs'
-    ```
-    </details>
-3. Reload *.bashrc* file, go into root of your project and start editing with *edit-ozone-docs* command.
-    <details open>
-    <summary>Reload and start editing ozone-docs</summary>
+```
 
-    ```shell
-    source ~/.bashrc
-    edit-ozone-docs
-    ```
-    </details>
-4. Every modification made in project affects documentation and is visible on [http://localhost:4567](http://localhost:4567).
+</details>
