@@ -17,9 +17,9 @@ Status Code | error | error_description
 <details open>
 <summary>Available fields for the selected publisher in the selected date range.</summary>
 
-  ```shell
-  GET /kpi/publisher-analytics-available-fields?publisher=<span style="color:blue">{publisher}</span>&start_date=<span style="color:blue">{start_date}</span>&end_date=<span style="color:blue">{end_date}</span>
-  ```
+```shell
+GET /kpi/publisher-analytics-available-fields?publisher=<span style="color:blue">{publisher}</span>&start_date=<span style="color:blue">{start_date}</span>&end_date=<span style="color:blue">{end_date}</span>
+```
 
 </details>
 
@@ -28,7 +28,7 @@ Status Code | error | error_description
 
 parameter | parameter_type | parameter_description
 ------------ | ------------- | -------------
-publisher | **string** (required) | one of the available publishers: *{guardian, news-uk, telegraph, reach, the-stylist-group, ozone}*, ozone means selecting all available publishers.
+publisher | **string** (required) | one of the available publishers: *{guardian, news-uk, telegraph, reach, the-stylist-group, ozone}*, ozone means selecting all available publishers
 start_date | **string** (required) |  starting date in YYYY-MM-DD format
 start_date | **string** (required) |  end date in YYYY-MM-DD format
 
@@ -37,13 +37,11 @@ start_date | **string** (required) |  end date in YYYY-MM-DD format
 <details closed>
 <summary>Example</summary>
 
-  ```shell
-  GET /kpi/publisher-analytics-available-fields?publisher=telegraph&start_date=2019-12-10&end_date=2019-12-11
+```shell
+GET /kpi/publisher-analytics-available-fields?publisher=telegraph&start_date=2019-12-10&end_date=2019-12-11
+```
 
-  ```
-
-  ```json
-
+```json
   {
       "device_type": [
           "Computer",
@@ -71,9 +69,5 @@ start_date | **string** (required) |  end date in YYYY-MM-DD format
           "300x50"
       ]
   }
-
 ```
-
-
-
 </details>
