@@ -17,11 +17,9 @@ Status Code | error | error_description
 <details open>
 <summary>Available fields for the selected publisher in the selected date range.</summary>
 
-```shell
-
-GET /kpi/publisher-analytics-available-fields?publisher={publisher}&start_date={start_date}&end_date={end_date}
-
-```
+  ```shell
+  GET /kpi/publisher-analytics-available-fields?publisher=<span style="color:blue">{publisher}</span>&start_date=<span style="color:blue">{start_date}</span>&end_date=<span style="color:blue">{end_date}</span>
+  ```
 
 </details>
 
@@ -39,42 +37,43 @@ start_date | **string** (required) |  end date in YYYY-MM-DD format
 <details closed>
 <summary>Example</summary>
 
-```shell
+  ```shell
+  GET /kpi/publisher-analytics-available-fields?publisher=telegraph&start_date=2019-12-10&end_date=2019-12-11
 
-GET /kpi/publisher-analytics-available-fields?publisher=telegraph</span>&start_date=2019-12-10&end_date=2019-12-11
+  ```
+
+  ```json
+
+  {
+      "device_type": [
+          "Computer",
+          "Mobile",
+          "Tablet",
+          "Game console",
+          "Digital media receiver"
+      ],
+      "domain": [
+          "telegraph.co.uk"
+      ],
+      "partner": [
+          "appnexus",
+          "openx",
+          "beeswax",
+          "rubicon",
+          "pubmatic"
+      ],
+      "size": [
+          "728x90",
+          "300x250",
+          "970x250",
+          "320x50",
+          "300x600",
+          "300x50"
+      ]
+  }
 
 ```
 
-```json
 
-{
-    "device_type": [
-        "Computer",
-        "Mobile",
-        "Tablet",
-        "Game console",
-        "Digital media receiver"
-    ],
-    "domain": [
-        "telegraph.co.uk"
-    ],
-    "partner": [
-        "appnexus",
-        "openx",
-        "beeswax",
-        "rubicon",
-        "pubmatic"
-    ],
-    "size": [
-        "728x90",
-        "300x250",
-        "970x250",
-        "320x50",
-        "300x600",
-        "300x50"
-    ]
-}
-
-```
 
 </details>
