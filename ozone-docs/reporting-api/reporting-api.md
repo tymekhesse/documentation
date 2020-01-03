@@ -1,6 +1,6 @@
 
 ## reporting-api
-## publisher analytics
+### publisher analytics
 This proof of concept is to determine whether the Admin UI’s current charting capability is the most suitable environment to build the Publisher Analytics suite.
 
 
