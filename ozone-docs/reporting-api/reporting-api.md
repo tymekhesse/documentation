@@ -4,7 +4,7 @@
 This proof of concept is to determine whether the Admin UI’s current charting capability is the most suitable environment to build the Publisher Analytics suite.
 
 
-### Available Fields endpoint
+#### Available Fields endpoint
 
 ```shell
     GET /kpi/publisher-analytics-available-fields?publisher={publisher}&start_date={start_date}&end_date={end_date}
@@ -74,7 +74,7 @@ GET /kpi/publisher-analytics-available-fields?publisher=telegraph&start_date=201
 </details>
 
 
-### Benchmark endpoint
+#### Benchmark endpoint
 
 ```shell
     GET /kpi/publisher-analytics-benchmark?start_date={start_date}&end_date={end_date}&publisher={publisher}
@@ -152,11 +152,11 @@ GET /kpi/publisher-analytics-benchmark?start_date=2019-11-16&end_date=2019-11-17
 
 </details>
 
-### Publisher analytics results endpoint
+#### Publisher analytics results endpoint
 
-```shell
-    GET /kpi/publisher-analytics?start_date={start_date}&end_date={end_date}&publisher={publisher}&{domain, size, device_type}&domain_list={domain_1, domain_2}&size_list={size_1, size_2}&device_list={device_1, device_2}&publisher_list={publisher_1, publisher_2}
-```
+  ```shell
+      GET /kpi/publisher-analytics?start_date={start_date}&end_date={end_date}&publisher={publisher}&{domain, size, device_type}&domain_list={domain_1, domain_2}&size_list={size_1, size_2}&device_list={device_1, device_2}&publisher_list={publisher_1, publisher_2}
+  ```
 
 <details/>
 <summary/>Details</summary>
@@ -270,7 +270,7 @@ GET /kpi/publisher-analytics?start_date=2019-11-16&end_date=2019-11-17&publisher
 
 </details>
 
-### Errors
+#### Errors
 When an error is encountered you will receive an HTTP status code along with a message and error code in the body of the response.
 
 <details/>
